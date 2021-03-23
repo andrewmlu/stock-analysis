@@ -7,3 +7,5 @@ V4.0-V4.1
 03/21/21: Developed model 4. Model 4 uses a different architecture, using T_x timesteps to project the value n_lag days in the future. Started off with a simple model and developed deeper model. Same as before, started off disorganized with the dataset generation because it is temporary.
 
 03/22/21: Included pandas library for data import. Significant difficulty at first upscaling from quarterly to daily, attempting a pivot table, but failed to assign values properly (always returned NaN), same with a for loop over groups. Lambda with groups yielded desired results.
+
+03/23/21: Success with merging two datasets by Ticker, Date and exporting to numpy.
