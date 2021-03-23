@@ -1,0 +1,9 @@
+V1.0-V3.0
+
+03/20/21: Beginning of project, primarily addressed loading text and began building model, though not very successful results yet. First model yielded mediocre results from an approximate view, but could not predict, so attempted model 2, with a for loop over single LSTM and dense layer for each time step, but model compilation unsuccessful (fixing bugs also took a long time, particularly be careful of output dimensions). So I developed model 3, which used same LSTM structure as model 1, but more layers (also reorganized data generation during model 2 development) so a pretty clean and slightly better results than previous models. Also attempted MinMaxScaler but was unsuccessful. Even though model 3 had decent results, it could not predict due to the nature of its architecture (a many-to-many model).
+
+V4.0-V4.1
+
+03/21/21: Developed model 4. Model 4 uses a different architecture, using T_x timesteps to project the value n_lag days in the future. Started off with a simple model and developed deeper model. Same as before, started off disorganized with the dataset generation because it is temporary.
+
+03/22/21: Included pandas library for data import. Significant difficulty at first upscaling from quarterly to daily, attempting a pivot table, but failed to assign values properly (always returned NaN), same with a for loop over groups. Lambda with groups yielded desired results.
