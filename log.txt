@@ -8,4 +8,4 @@ V4.0-V4.1
 
 03/22/21: Included pandas library for data import. Significant difficulty at first upscaling from quarterly to daily, attempting a pivot table, but failed to assign values properly (always returned NaN), same with a for loop over groups. Lambda with groups yielded desired results.
 
-03/23/21: Success with merging two datasets by Ticker, Date and exporting to numpy.
+03/23/21: Success with merging two datasets by Ticker, Date and exporting to numpy. Further success with implementing YoY revenue growth and cleaning data to remove any incomplete data.
