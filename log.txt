@@ -10,4 +10,4 @@ V4.0-V4.1
 
 03/23/21: Success with merging two datasets by Ticker, Date and exporting to numpy. Further success with implementing YoY revenue growth and cleaning data to remove any incomplete data. Began building model, but returned NaN loss value.
 
-03/24/21: Simplification and cleaning of code. Transformed data using MinMaxScaler. Model now able to run successfully. Need to fix naming. Further simplification of code into methods.
+03/24/21: Simplification and cleaning of code. Transformed data using MinMaxScaler. Model now able to run successfully. Need to fix naming. Further simplification of code into methods. Improved model with additional layers, improved scaling, and created rudimentary prediction graph.
