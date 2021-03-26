@@ -12,7 +12,7 @@ V4.0-V4.1
 
 03/24/21: Simplification and cleaning of code. Transformed data using MinMaxScaler. Model now able to run successfully. Need to fix naming. Further simplification of code into methods. Improved model with additional layers, improved scaling, and created rudimentary prediction graph. Pivot table changed column order to alphabetical so reordered in order to be compatible with MinMaxScaler.
 
-03/25/21: Implemented mean squared error loss function with custom weighting. Weighting: weights_m1 [100,1,1,1,10]. Debugged predict ability and potential model issues including MAPE loss, using logs. Some of the variance in the results came from random initialization. MAPE seems to underperform MSE in most cases, especially with a log preprocess. Recompiling/reinitializing model is critical. Implemented prediction in procedural format.
+03/25/21: Implemented mean squared error loss function with custom weighting. Weighting: weights_m1 [100,1,1,1,10]. Debugged predict ability and potential model issues including MAPE loss, using logs. Tested on Tx=1, n_forward=1. Some of the variance in the results came from random initialization. MAPE seems to underperform MSE in most cases, especially with a log preprocess. Recompiling/reinitializing model is critical. Implemented prediction in procedural format. Training error in high digits of 1e-6. Experimenting with different T_x and n_forward values.
 
 
 Done:
