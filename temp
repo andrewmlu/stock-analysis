@@ -1,0 +1,24 @@
+def model5_v2(reg=1e-4, dropout=0.2): # EDIT
+    
+    """
+    This model is based on model v5.1 but includes further regularization techniques to reduce overfitting.
+    
+    Parameters:
+    reg -- kernel (layer weights) regularization coefficient
+    dropout -- rate of dropout for layers
+    """
+    
+    X_input = Input(shape=(T_x, n_inputs))
+    X = Dropout(0.2)(X_input)
+    X = LSTM(units=128, return_sequences=True, kernel_regularizer=l2(reg), dropout=dropout)(X)
+    X = TimeDistributed(Dense(units=256, kernel_regularizer=l2(reg)))(X)
+    X = LSTM(units=256, return_sequences=True, kernel_regularizer=l2(reg), dropout=dropout)(X)
+    X = TimeDistributed(Dense(units=256, kernel_regularizer=l2(reg)))(X)
+    X = LSTM(units=128, kernel_regularizer=l2(reg), dropout=dropout)(X)
+    X = Dropout(0.3)(X)
+    X = Dense(units=128, kernel_regularizer=l2(reg))(X)
+    output = Dense(units=n_values, kernel_regularizer=l2(reg))(X)
+    
+    model = Model(inputs=X_input, outputs=output)
+    
+    return model
